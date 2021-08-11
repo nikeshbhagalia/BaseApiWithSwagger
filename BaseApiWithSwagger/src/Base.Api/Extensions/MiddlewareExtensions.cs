@@ -17,7 +17,7 @@ namespace Base.Api.Extensions
                 {
                     Title = "Base API",
                     Version = "v1",
-                    Description = "Base Net Core 3.1 Api With Swagger."
+                    Description = "Base .Net Core 3.1 Api With Swagger."
                 });
                 
                 var securitySchema = new OpenApiSecurityScheme
