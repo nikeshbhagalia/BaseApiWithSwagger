@@ -1,1 +1,1 @@
-# Base Api with Swagger and Bearer Auth
+# Base Api with Swagger and Bearer Authentication
