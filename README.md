@@ -1,1 +1,1 @@
-# Base Api with Swagger and Bearer Token Authentication
+# Base Api with Swagger and JWT Bearer Token Authentication
