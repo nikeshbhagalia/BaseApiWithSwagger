@@ -2,4 +2,4 @@
 
 To use, replace all instances of Base with your api name.
 
-To do: Separate folders into .Net Standard projects.
+To do: Separate folders into .Net Standard project files.
