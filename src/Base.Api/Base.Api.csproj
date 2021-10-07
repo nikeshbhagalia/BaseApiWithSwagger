@@ -20,14 +20,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Base.Filters\Base.Filters.csproj" />
-    <ProjectReference Include="..\..\Base.Settings\Base.Settings.csproj" />
     <ProjectReference Include="..\Base.Data\Base.Data.csproj" />
     <ProjectReference Include="..\Base.Extensions\Base.Extensions.csproj" />
+    <ProjectReference Include="..\Base.Filters\Base.Filters.csproj" />
     <ProjectReference Include="..\Base.Repositories.Interfaces\Base.Repositories.Interfaces.csproj" />
     <ProjectReference Include="..\Base.Repositories\Base.Repositories.csproj" />
     <ProjectReference Include="..\Base.Services.Interfaces\Base.Services.Interfaces.csproj" />
     <ProjectReference Include="..\Base.Services\Base.Services.csproj" />
+    <ProjectReference Include="..\Base.Settings\Base.Settings.csproj" />
     <ProjectReference Include="..\Base.ViewModels\Base.ViewModels.csproj" />
   </ItemGroup>
 
