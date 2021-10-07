@@ -11,10 +11,17 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.18" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.18">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Base.Filters\Base.Filters.csproj" />
+    <ProjectReference Include="..\..\Base.Settings\Base.Settings.csproj" />
     <ProjectReference Include="..\Base.Data\Base.Data.csproj" />
     <ProjectReference Include="..\Base.Extensions\Base.Extensions.csproj" />
     <ProjectReference Include="..\Base.Repositories.Interfaces\Base.Repositories.Interfaces.csproj" />

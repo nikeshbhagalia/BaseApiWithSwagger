@@ -1,18 +1,24 @@
 ﻿using AutoMapper;
 using Base.Data;
 using Base.Extensions;
+using Base.Filters;
 using Base.Repositories;
 using Base.Repositories.Interfaces;
 using Base.Services;
 using Base.Services.Interfaces;
+using Base.Settings;
 using Base.ViewModels;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using System;
+using System.Security.Claims;
+using System.Text.Json.Serialization;
 
 namespace Base.Api
 {
@@ -39,7 +45,30 @@ namespace Base.Api
 
             services.AddAutoMapper(typeof(DummyVm));
 
-            services.AddMvc();
+            services.AddScoped<ExceptionFilter>();
+
+            services.AddMvc(cfg => cfg.Filters.AddService<ExceptionFilter>())
+                .AddJsonOptions(options =>
+                {
+                    var enumConverter = new JsonStringEnumConverter();
+                    options.JsonSerializerOptions.Converters.Add(enumConverter);
+                });
+
+            var auth = Configuration.GetSection(nameof(Auth)).Get<Auth>();
+            services.AddSingleton(auth);
+
+            services
+                .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.Authority = auth.Authority;
+                    options.Audience = auth.Audience;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        NameClaimType = ClaimTypes.NameIdentifier,
+                        RoleClaimType = auth.RoleKey
+                    };
+                });
 
             services.AddCustomSwagger();
 
@@ -57,6 +86,7 @@ namespace Base.Api
 
             app.UseRouting();
 
+            //app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
