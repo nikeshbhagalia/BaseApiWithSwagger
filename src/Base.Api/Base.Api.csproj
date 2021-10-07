@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp3.1\Base.Api.xml</DocumentationFile>
+    <OutputPath>bin\Debug\netcoreapp3.1\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.18" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.18">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Base.Filters\Base.Filters.csproj" />
+    <ProjectReference Include="..\..\Base.Settings\Base.Settings.csproj" />
+    <ProjectReference Include="..\Base.Data\Base.Data.csproj" />
+    <ProjectReference Include="..\Base.Extensions\Base.Extensions.csproj" />
+    <ProjectReference Include="..\Base.Repositories.Interfaces\Base.Repositories.Interfaces.csproj" />
+    <ProjectReference Include="..\Base.Repositories\Base.Repositories.csproj" />
+    <ProjectReference Include="..\Base.Services.Interfaces\Base.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Base.Services\Base.Services.csproj" />
+    <ProjectReference Include="..\Base.ViewModels\Base.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

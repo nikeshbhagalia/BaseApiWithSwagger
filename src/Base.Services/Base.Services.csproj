@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Repositories.Interfaces\Base.Repositories.Interfaces.csproj" />
+    <ProjectReference Include="..\Base.Services.Interfaces\Base.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
