@@ -1,11 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using System;
-using System.IO;
-using System.Reflection;
 
-namespace Base.Api.Extensions
+namespace Base.Extensions
 {
     public static class MiddlewareExtensions
     {
@@ -19,7 +16,7 @@ namespace Base.Api.Extensions
                     Version = "v1",
                     Description = "Base .Net Core 3.1 Api With Swagger."
                 });
-                
+
                 var securitySchema = new OpenApiSecurityScheme
                 {
                     Description = "JWT Authorization header using the Bearer scheme. Example: \"token\"",

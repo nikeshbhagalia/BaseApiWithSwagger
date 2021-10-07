@@ -1,8 +1,8 @@
-﻿using Base.Api.Data.Models;
+﻿using Base.Data.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Base.Api.Repositories.Interfaces
+namespace Base.Repositories.Interfaces
 {
     public interface IDummyRepository
     {

@@ -1,8 +1,8 @@
-﻿using Base.Api.Data.Models;
+﻿using Base.Data.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Base.Api.Services.Interfaces
+namespace Base.Services.Interfaces
 {
     public interface IDummyService
     {

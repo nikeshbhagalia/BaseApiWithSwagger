@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
-using Base.Api.Data;
-using Base.Api.Extensions;
-using Base.Api.Repositories;
-using Base.Api.Repositories.Interfaces;
-using Base.Api.Services;
-using Base.Api.Services.Interfaces;
+using Base.Data;
+using Base.Extensions;
+using Base.Repositories;
+using Base.Repositories.Interfaces;
+using Base.Services;
+using Base.Services.Interfaces;
+using Base.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -36,7 +37,7 @@ namespace Base.Api
 
             services.AddScoped<IDummyService, DummyService>();
 
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(typeof(DummyVm));
 
             services.AddMvc();
 

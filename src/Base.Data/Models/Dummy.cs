@@ -1,4 +1,4 @@
-﻿namespace Base.Api.Data.Models
+﻿namespace Base.Data.Models
 {
     public class Dummy
     {

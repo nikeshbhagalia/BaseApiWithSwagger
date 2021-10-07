@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Base.Api.Data.Models;
-using Base.Api.Services.Interfaces;
-using Base.Api.ViewModels;
+using Base.Data.Models;
+using Base.Services.Interfaces;
+using Base.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;

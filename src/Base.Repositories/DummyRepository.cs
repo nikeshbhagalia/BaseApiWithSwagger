@@ -1,12 +1,12 @@
-﻿using Base.Api.Data;
-using Base.Api.Data.Models;
-using Base.Api.Repositories.Interfaces;
+﻿using Base.Data;
+using Base.Data.Models;
+using Base.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Base.Api.Repositories
+namespace Base.Repositories
 {
     public class DummyRepository : IDummyRepository
     {

@@ -1,10 +1,10 @@
-﻿using Base.Api.Data.Models;
-using Base.Api.Repositories.Interfaces;
-using Base.Api.Services.Interfaces;
+﻿using Base.Data.Models;
+using Base.Repositories.Interfaces;
+using Base.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Base.Api.Services
+namespace Base.Services
 {
     public class DummyService : IDummyService
     {

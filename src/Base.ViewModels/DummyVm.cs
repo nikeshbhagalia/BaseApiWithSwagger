@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Base.Api.Data.Models;
+using Base.Data.Models;
 
-namespace Base.Api.ViewModels
+namespace Base.ViewModels
 {
     public class DummyVm
     {
