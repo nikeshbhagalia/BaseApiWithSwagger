@@ -1,3 +1,3 @@
 # Base Api with Swagger and JWT Bearer Token Authentication
 
-To use, replace all instances of Base with your api name.
+To do: Create Powershell script to rename projects, namespaces etc
