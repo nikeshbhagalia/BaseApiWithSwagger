@@ -1,11 +1,4 @@
-<#
-PowerShell script to rename C# Project step-by-step: 
-* Copying project folder to folder with new project name
-* Renaming .csproj file and other files with project name
-* Changing project name reference in .sln solution file
-* Changing RootNamespace and AssemblyName in .csproj file
-* Renaming project inside AssemblyInfo.cs
-#>
+
 param(
     [parameter(
         HelpMessage="New project file name, without extension.",
