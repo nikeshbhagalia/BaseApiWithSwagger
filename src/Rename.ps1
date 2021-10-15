@@ -45,4 +45,3 @@ Foreach ($ProjectFolderName IN $ProjectFolderNames)
 		% { if ($_ -match ("<(?:AssemblyName|RootNamespace)>(" + $OldProjectName +")</")) { $_ -replace $($matches[1]), $NewProjectNameWithSuffix } else { $_ }} |
 		Set-Content $NewProjectFile
 }
-Read-Host -Prompt "Press Enter to exit"
