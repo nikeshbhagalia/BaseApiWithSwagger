@@ -2,4 +2,4 @@
 
 Run Powershell script to rename projects and solution.
 
-To do: add cors
+To do: add cors stuff
