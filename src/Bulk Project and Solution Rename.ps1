@@ -1,4 +1,3 @@
-
 param(
     [parameter(
         HelpMessage="New project file name, without extension.",
