@@ -46,6 +46,8 @@ namespace BaseSwagger.Api
             services.AddAutoMapper(typeof(DummyVm));
 
             services.AddScoped<ExceptionFilter>();
+            
+            var origins = Configuration.GetValue<string>("Cors").Split("|");
 
             services.AddMvc(cfg => cfg.Filters.AddService<ExceptionFilter>())
                 .AddJsonOptions(options =>
